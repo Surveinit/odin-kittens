@@ -35,7 +35,6 @@ class KittensController < ApplicationController
 
   private
   def kitten_params
-    params.expect(kitten: [ :name ])
     params.require(:kitten).permit(:name, :age, :cuteness, :softness)
   end
 end
