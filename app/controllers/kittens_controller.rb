@@ -1,4 +1,5 @@
 class KittensController < ApplicationController
+  before_action :set_kitten, only: [ :show, :edit, :update, :destroy ]
   def index
     @kittens = Kitten.all
   end
@@ -33,7 +34,20 @@ class KittensController < ApplicationController
     end
   end
 
+  def destroy
+    if @kitten.destroy
+      redirect_to(kittens_url, notice: "Kitten data was deleted successfully!")
+    else
+      redirect_to(kittens_url, alert: "Error deleting kitten: #{@kitten.errors.full_messages.join(", ")}")
+    end
+  end
+
   private
+
+  def set_kitten
+    @kitten = Kitten.find(params[:id])
+  end
+
   def kitten_params
     params.require(:kitten).permit(:name, :age, :cuteness, :softness)
   end

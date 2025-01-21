@@ -5,5 +5,6 @@
     <li>
       <%= link_to kitten.name, kitten_path(kitten) %> 
     </li>
+      <%= button_to 'Delete', kitten, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
 </ol>
