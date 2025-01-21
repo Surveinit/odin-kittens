@@ -37,4 +37,5 @@
   </div>
 <% end %>
 
+<%= button_to 'Delete', @kitten, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%= link_to 'Back', kittens_path %>
