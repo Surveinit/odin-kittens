@@ -2,6 +2,8 @@
 
 <ol>
   <% @kittens.each do |kitten| %>
-    <li><%= kitten.name %></li>
+    <li>
+      <%= link_to kitten.name, kitten_path(kitten) %> 
+    </li>
   <% end %>
 </ol>
