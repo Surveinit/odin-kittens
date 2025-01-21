@@ -1,24 +1,4 @@
-# README
+# 🐱 Building a kittens API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a quick and straightforward project where I’ve been tasked with setting up a Rails app to function as a data-producing API.
+In simpler terms, this means that all the controller methods will render data instead of HTML.
