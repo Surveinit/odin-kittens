@@ -2,6 +2,12 @@ class KittensController < ApplicationController
   before_action :set_kitten, only: [ :show, :edit, :update, :destroy ]
   def index
     @kittens = Kitten.all
+    respond_to do |format|
+      # index.html.erb
+      format.html
+      format.json { render(json: @kittens) }
+      format.xml { render(xml: @kittens) }
+    end
   end
 
   def show
